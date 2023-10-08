@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 2.5rem;
+  width: 8rem;
+}
+
+.header-menu {
+  display: flex;
+  list-style: none;
+  color: white;
+  gap: 2rem;
+}
+
+.header-menu > li:hover {
+  cursor: pointer;
+  color: var(--orange);
+}
+
+@media screen and (max-width: 860px) {
+  .header-menu {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 2.5rem;
+    width: 5rem;
+  }
+
+  .header {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .header-menu {
+    gap: 0.7rem;
+    font-size: 0.82rem;
+  }
+
+  .logo {
+    height: 2.5rem;
+    width: 5rem;
+  }
+
+  .header {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+  }
+  .header-menu {
+    gap: 0.58rem;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    height: 3rem;
+    width: 6rem;
+  }
+}

@@ -1,0 +1,630 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-h {
+  padding: 0.5rem 1.5rem;
+  /* the left side has width thrice that of right-side */
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right-h {
+  flex: 1;
+  position: relative;
+  background-color: var(--orange);
+}
+
+.right-h > Link > .btn {
+  position: absolute;
+  color: black;
+  top: 2rem;
+  left: 3rem;
+}
+
+.the-best-ad {
+  margin-top: 4rem;
+  background-color: #363d42;
+  border-radius: 4rem;
+  width: fit-content;
+  padding: 18px 15px;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.the-best-ad > span {
+  z-index: 2;
+  /* z index to decide which element to show over the other higher z implies above */
+}
+
+.the-best-ad > div {
+  position: absolute;
+  background-color: var(--orange);
+  border-radius: 3rem;
+  left: 10px;
+  height: 80%;
+  width: 5.4rem;
+  z-index: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  gap: 1.6rem;
+  text-overflow: inherit;
+}
+/* the third div of hero text */
+.hero-text > div:nth-of-type(3) {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: none; /* to remove the upper-text effect from parent element*/
+  width: 60%;
+  font-weight: 200;
+}
+
+.figures {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.figures > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.figures > div > span:nth-of-type(1) {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.figures > div > span:nth-of-type(2) {
+  color: var(--gray);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: normal;
+}
+
+.hero-buttons > :nth-child(1) {
+  color: white;
+  background-color: var(--orange);
+  width: 8rem;
+}
+
+.hero-buttons > :nth-child(2) {
+  color: white;
+  background-color: transparent;
+  width: 8rem;
+  border: 2px solid var(--orange);
+}
+
+.right-h > Link > .btn {
+  position: absolute;
+  color: black;
+  top: 1.5rem;
+  right: 3rem;
+}
+
+.heart-rate {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--darkGrey);
+  width: fit-content;
+  padding: 1rem;
+  align-items: flex-start;
+  border-radius: 5px;
+  right: 4rem;
+  top: 7rem;
+}
+
+.heart-rate > img {
+  width: 2rem;
+}
+
+.heart-rate > :nth-child(2) {
+  color: var(--gray);
+}
+
+.heart-rate > :nth-child(3) {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hero-image {
+  position: absolute;
+  width: 23rem;
+  top: 9rem;
+  right: 13.5rem;
+}
+
+.hero-image-back {
+  position: absolute;
+  width: 10rem;
+  top: 4rem;
+  right: 28rem;
+  z-index: -1;
+}
+
+.calories {
+  gap: 1.2rem;
+  display: flex;
+  padding: 0.7rem;
+  border-radius: 5px;
+  background-color: var(--caloryCard);
+  width: 10rem;
+  position: absolute;
+  top: 33rem;
+  right: 2rem;
+}
+
+.calories > img {
+  width: 2rem;
+}
+
+.calories > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calories > div > :nth-child(1) {
+  color: var(--gray);
+}
+
+.calories > div > :nth-child(2) {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hero-blur {
+  width: 22rem;
+  height: 30rem;
+  left: 0px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1050px) {
+  .figures {
+    flex-direction: column;
+  }
+
+  .figures > div {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1040px) {
+  .hero-image-back {
+    width: 9rem;
+  }
+  .hero-image {
+    width: 22.5rem;
+    right: 13rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1025px) {
+  .hero-text > :nth-child(1) {
+    font-size: 2.5rem;
+  }
+
+  .hero-text > :nth-child(2) {
+    font-size: 2.5rem;
+  }
+
+  .hero-text > div:nth-of-type(3) {
+    font-size: 0.8rem;
+    letter-spacing: 0.7px;
+    text-transform: none;
+    width: 40%;
+    font-weight: 200;
+  }
+
+  .calories {
+    gap: 1rem;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--caloryCard);
+    width: 8rem;
+    position: absolute;
+    top: 33rem;
+    right: 1.5rem;
+  }
+
+  .calories > img {
+    width: 1.7rem;
+  }
+
+  .calories > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .calories > div > :nth-child(1) {
+    color: var(--gray);
+  }
+
+  .calories > div > :nth-child(2) {
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  .the-best-ad {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+
+  .the-best-ad > :nth-child(1) {
+    position: absolute;
+    background-color: var(--orange);
+    border-radius: 3rem;
+    left: 5px;
+    height: 80%;
+    width: 2.8rem;
+    z-index: 1;
+  }
+
+  .hero-image {
+    position: absolute;
+    width: 23rem;
+    top: 9rem;
+    right: 12.7rem;
+  }
+
+  .hero-image-back {
+    position: absolute;
+    width: 12rem;
+    top: 4rem;
+    right: 27rem;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 917px) {
+  .the-best-ad {
+    margin-top: 2rem;
+    background-color: #363d42;
+    border-radius: 4rem;
+    width: fit-content;
+    padding: 10px 8px;
+    text-transform: uppercase;
+    color: white;
+  }
+  .hero-image {
+    position: absolute;
+    width: 18rem;
+    top: 10.5rem;
+    right: 13.5rem;
+  }
+
+  .hero-image-back {
+    position: absolute;
+    width: 12rem;
+    top: 4rem;
+    right: 23rem;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 860px) {
+  .left-h {
+    padding: 0.5rem 1.5rem;
+    /* the left side has width thrice that of right-side */
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .right-h {
+    flex: 1;
+    position: relative;
+    background-color: var(--orange);
+  }
+  .calories {
+    gap: 0.8rem;
+    display: flex;
+    padding: 0.4rem;
+    border-radius: 5px;
+    background-color: var(--caloryCard);
+    width: 6rem;
+    position: absolute;
+    top: 25rem;
+    right: 1.2rem;
+  }
+
+  .calories > img {
+    width: 1.6rem;
+  }
+
+  .calories > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .calories > div > :nth-child(1) {
+    color: var(--gray);
+    font-size: 1rem;
+  }
+
+  .calories > div > :nth-child(2) {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    position: absolute;
+    width: 12.5rem;
+    height: 17rem;
+    top: 8rem;
+    right: 10rem;
+  }
+
+  .hero-image-back {
+    position: absolute;
+    width: 7rem;
+    top: 4rem;
+    right: 17rem;
+    z-index: -1;
+  }
+
+  .the-best-ad {
+    margin-top: 0rem;
+    padding: 9px 6px;
+    font-size: 0.7rem;
+  }
+
+  .the-best-ad > :nth-child(1) {
+    position: absolute;
+    background-color: var(--orange);
+    border-radius: 3rem;
+    left: 3.5px;
+    height: 80%;
+    width: 2rem;
+    z-index: 1;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    gap: 0.8rem;
+    text-overflow: inherit;
+  }
+  /* the third div of hero text */
+  .hero-text > div:nth-of-type(1) {
+    font-size: 2.5rem;
+    letter-spacing: 0.8px;
+    text-transform: none; /* to remove the upper-text effect from parent element*/
+    width: 55%;
+    font-weight: 200;
+  }
+  .hero-text > div:nth-of-type(2) {
+    font-size: 2.5rem;
+    letter-spacing: 0.8px;
+    text-transform: none; /* to remove the upper-text effect from parent element*/
+    width: 55%;
+    font-weight: 200;
+  }
+  .hero-text > div:nth-of-type(3) {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    text-transform: none; /* to remove the upper-text effect from parent element*/
+    width: 55%;
+    font-weight: 200;
+  }
+
+  .figures {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: normal;
+  }
+
+  .hero-buttons > :nth-child(1) {
+    color: white;
+    background-color: var(--orange);
+    width: 8rem;
+  }
+
+  .hero-buttons > :nth-child(2) {
+    color: white;
+    background-color: transparent;
+    width: 8rem;
+    border: 2px solid var(--orange);
+  }
+
+  .heart-rate {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background-color: var(--darkGrey);
+    width: fit-content;
+    padding: 0.8rem;
+    align-items: flex-start;
+    border-radius: 5px;
+    right: 0.8rem;
+    top: 8rem;
+  }
+
+  .heart-rate > img {
+    width: 2rem;
+  }
+
+  .heart-rate > :nth-child(2) {
+    color: var(--gray);
+  }
+
+  .heart-rate > :nth-child(3) {
+    color: white;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 630px) {
+  .hero-image {
+    position: absolute;
+    width: 12rem;
+    height: 17rem;
+    top: 8rem;
+    right: 9rem;
+  }
+
+  .hero-image-back {
+    position: absolute;
+    width: 5.8rem;
+    top: 5rem;
+    right: 16.2rem;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 715px) and (max-width: 770px) {
+  .hero-image {
+    position: absolute;
+    width: 14.6rem;
+    height: 18.2rem;
+    top: 8rem;
+    right: 12rem;
+  }
+
+  .hero-image-back {
+    position: absolute;
+    width: 7.2rem;
+    top: 4rem;
+    right: 21rem;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 860px) {
+  .hero-image {
+    position: absolute;
+    width: 16rem;
+    height: 20rem;
+    top: 8rem;
+    right: 14rem;
+  }
+
+  .hero-image-back {
+    position: absolute;
+    width: 7.2rem;
+    top: 4rem;
+    right: 24rem;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-blur {
+    width: 14rem;
+  }
+
+  .the-best-ad {
+    margin-top: 0;
+    font-size: small;
+    align-self: center;
+    transform: scale(0.8);
+  }
+
+  .hero-text {
+    font-size: 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-text > div:nth-of-type(3) {
+    font-size: small;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .figures > div > span:nth-of-type(1) {
+    font-size: larger;
+  }
+  .figures > div > span:nth-of-type(2) {
+    font-size: small;
+  }
+
+  .right-h {
+    position: relative;
+    background: none;
+  }
+
+  .right-h > Link > button {
+    position: absolute;
+    color: black;
+    top: 2rem;
+    left: 8.5rem;
+  }
+
+  .heart-rate {
+    left: 1rem;
+    top: 2rem;
+  }
+
+  .calories {
+    position: relative;
+    top: 5rem;
+    left: 2rem;
+  }
+
+  .calories > img {
+    width: 2rem;
+  }
+
+  .calories > div > :nth-child(2) {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    position: relative; /* so that it has its own space  */
+    width: 15rem;
+    left: 8rem;
+    top: 4rem;
+    align-self: center;
+  }
+
+  .hero-image-back {
+    width: 15rem;
+    left: 3rem;
+    top: 0rem;
+  }
+}
